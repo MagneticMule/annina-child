@@ -103,7 +103,7 @@
 
 .site-header a, .site-header a:hover, .site-header a:focus, .site-header, .site-footer a, .site-footer a:hover {
 	color: #eaeaea;
-  font-size: 75%;
+  font-size: 100%;
 }
 
 body.single .content-area, body.page .content-area {
