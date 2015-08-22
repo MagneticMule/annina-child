@@ -30,22 +30,25 @@ function custom_layout_injector( $content )
     <div class="content-col-left">
         &nbsp;
         Put your image here.
+        <br>
+        <div class="content-row-bottom">
+
+            Put your sound file here.
+
+        </div>
     </div>
 
     <div class="content-col-right">
         <div class="show-hide visible">
-            &nbsp;
+            <b>Transcript</b>
+            <hr />
             Put Your Transcript here.
         </div>
         <div class="button-container"></div>
     </div>
 
 
-    <div class="content-col-left">
-        &nbsp;
-        Put your sound file here.
 
-    </div>
 
 
     ';

@@ -42,15 +42,14 @@
   float: right;
   width: 40%;
   border-color: black;
+  height: 100%;
   vertical-align:top;
 }
 
 .content-row-bottom {
-  margin-top:8px;
+  display: inline-block;
   clear: both;
   padding: 1%;
   background-color: #f5f5f4;
-  width: 98%;
-  border-width: 1%;
-  border-color: black;
+  width: 55%;
 }

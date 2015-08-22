@@ -18,17 +18,16 @@
   margin: 1%;
   border-width: 1%;
   width: 100%;
-  height: auto;
   vertical-align:top;
 }
 
 .content-col-left {
   padding: 1%;
-  margin: 1%;
-  border-width: 1%;
   float: left;
   border-color: black;
-  width: 55%;
+  width: 50%;
+  max-width: 60%;
+  min-width: 10%
   height: 100%;
   vertical-align:top;
 }
@@ -36,21 +35,18 @@
 .content-col-right {
   padding: 1%;
   float: right;
-  width: 40%;
-  border-width: 1%;
-  border-color: black;
+  width: 50%;
+  max-width: 60%;
+  min-width: 40%
   margin: 1%;
+  height: 100%;
   vertical-align:top;
 }
 
 .content-row-bottom {
-  margin-top: 8px;
-  clear: both;
+  float:left;
   padding: 1%;
-  background-color: #f5f5f4;
-  width: 98%;
-  border-width: 1%;
-  border-color: black;
+  width: 100%
 }
 
 .hidden {
@@ -62,6 +58,9 @@
 }
 
 .button-container {
+  padding: 1%;
+  vertical-align:top;
+  display: inline-block;
   text-align: right;
 }
 
