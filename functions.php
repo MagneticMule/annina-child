@@ -44,11 +44,6 @@ function custom_layout_injector( $content )
         </div>
         <div class="button-container"></div>
     </div>
-
-
-
-
-
     ';
     return $content;
 }
