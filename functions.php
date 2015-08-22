@@ -32,9 +32,7 @@ function custom_layout_injector( $content )
         Put your image here.
         <br>
         <div class="content-row-bottom">
-
             Put your sound file here.
-
         </div>
     </div>
 
@@ -98,8 +96,8 @@ add_action( 'init', 'youlisten_change_post_object' );
 
 
 function youlisten_add_acripts() {
-    wp_register_script( 'add-buttons', get_stylesheet_directory_uri() . '/js/addButtons.js', array ('jquery'));
-    wp_enqueue_script('add-buttons');
+    wp_register_script( 'show-hide', get_stylesheet_directory_uri() . '/js/showHide.js', array ('jquery'));
+    wp_enqueue_script('show-hide');
 }
 
 add_action( 'wp_enqueue_scripts', 'youlisten_add_acripts');

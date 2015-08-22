@@ -45,7 +45,6 @@
 
 .content-row-bottom {
   float:left;
-  padding: 1%;
   width: 100%
 }
 
@@ -90,10 +89,6 @@
 }
 
 .main-navigation {
-  display: none;
-}
-
-.socialLine {
   display: none;
 }
 

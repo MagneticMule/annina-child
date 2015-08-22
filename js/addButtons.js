@@ -5,11 +5,5 @@
     });
 */
 
-jQuery(document).ready(
-    function($) {
-        jQuery( '.button-container' ).append( '<input value="Transcript" type="button" class="right" id="showtranscript" />' );
-        jQuery('#showtranscript').click(function() {
-            jQuery('.show-hide').slideToggle('medium').hide();
-        });
-    });
+
 
