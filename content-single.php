@@ -11,10 +11,6 @@
 
         <header class="entry-header">
             <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-
-            <div class="entry-meta smallPart">
-                <?php annina_posted_on(); ?>
-            </div><!-- .entry-meta -->
         </header><!-- .entry-header -->
 
         <div class="entry-content">
@@ -31,6 +27,7 @@
 
             <footer class="entry-footer smallPart">
                 <?php annina_entry_footer(); ?>
+                <?php annina_posted_on(); ?>
             </footer><!-- .entry-footer -->
         </div><!-- .content-annina -->
     </article><!-- #post-## -->
