@@ -38,11 +38,12 @@ function custom_layout_injector( $content )
 
     <div class="content-col-right">
         <div class="show-hide visible">
+            &nbsp;
             <b>Transcript</b>
             <hr />
             Put Your Transcript here.
         </div>
-        <div class="button-container"></div>
+        <div class="button-container">&nbsp;</div>
     </div>
     ';
     return $content;
