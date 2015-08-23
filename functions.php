@@ -37,16 +37,27 @@ function custom_layout_injector( $content )
     </div>
 
     <div class="content-col-right">
-        <div class="show-hide visible">
-            &nbsp;
-            <b>Transcript</b>
+        <div id="tab-container">
+          <ul class="box-tabs">
+              <li><a href="#blank-div">Hide</a></li>
+              <li><a href="#transcript-div">Transcript</a></li>
+              <li><a href="#questions-div">Questions</a></li>
+          </ul>
+          <div id="blank-div"></div>
+          <div id="transcript-div">
+            <h2>Transcript</h2>
             <hr />
-            Put Your Transcript here.
+            <p>Paste your Transcript here</p>
         </div>
-        <div class="button-container">&nbsp;</div>
+        <div id="questions-div">
+            <h2>Questions</h2>
+            <hr/>
+            <p>Paste your questions here</p>
+        </div>
     </div>
-    ';
-    return $content;
+</div>
+';
+return $content;
 }
 add_filter('default_content', 'custom_layout_injector' );
 
@@ -94,6 +105,8 @@ add_action( 'init', 'youlisten_change_post_object' );
 function youlisten_add_acripts() {
     wp_register_script( 'show-hide', get_stylesheet_directory_uri() . '/js/showHide.js', array ('jquery'));
     wp_enqueue_script('show-hide');
+    wp_register_script( 'easytabs', get_stylesheet_directory_uri() . '/js/jquery/jquery.easytabs.js', array ('jquery'));
+    wp_enqueue_script('easytabs');
 }
 
 add_action( 'wp_enqueue_scripts', 'youlisten_add_acripts');

@@ -12,8 +12,12 @@
  Text Domain:  annina-child
  */
 
+ .box-tabs {
+  list-style: none;
+}
 
- .content-row-top {
+
+.content-row-top {
   padding: 1%;
   margin: 1%;
   border-width: 1%;
