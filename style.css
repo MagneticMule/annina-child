@@ -14,11 +14,11 @@
 
  .box-tabs {
   margin: 0 0 0 0;
-
+  padding-bottom: 60px;
 }
-.box-tabs li{
-  line-height: 60px;
-  width:120px;
+
+.box-tabs>li{
+  padding-right:20px;
   list-style: none;
   text-decoration: none;
   text-align: center;
