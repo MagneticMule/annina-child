@@ -103,8 +103,8 @@ add_action( 'init', 'youlisten_change_post_object' );
 
 
 function youlisten_add_acripts() {
-    wp_register_script( 'show-hide', get_stylesheet_directory_uri() . '/js/showHide.js', array ('jquery'));
-    wp_enqueue_script('show-hide');
+    wp_register_script( 'inits', get_stylesheet_directory_uri() . '/js/inits.js', array ('jquery'));
+    wp_enqueue_script('inits');
     wp_register_script( 'easytabs', get_stylesheet_directory_uri() . '/js/jquery/jquery.easytabs.js', array ('jquery'));
     wp_enqueue_script('easytabs');
 }
