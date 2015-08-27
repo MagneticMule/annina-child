@@ -101,7 +101,10 @@ function youlisten_change_post_object() {
 add_action( 'admin_menu', 'youlisten_change_post_label' );
 add_action( 'init', 'youlisten_change_post_object' );
 
-
+/**
+ * Add any and all javascript to the page
+ * @return  none
+ */
 function youlisten_add_acripts() {
     wp_register_script( 'inits', get_stylesheet_directory_uri() . '/js/inits.js', array ('jquery'));
     wp_enqueue_script('inits');
@@ -110,3 +113,15 @@ function youlisten_add_acripts() {
 }
 
 add_action( 'wp_enqueue_scripts', 'youlisten_add_acripts');
+
+
+/**
+ * Redirects the current user to the login page if they are not logged in
+ */
+function redirect_to_login() {
+    // [String] wordpress global storing currently visited page
+    global $pagenow;
+    if((!is_user_logged_in() && ($pagenow != 'wp-login.php')) {
+        auth_redirect();
+    }
+}
