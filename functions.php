@@ -135,7 +135,7 @@ add_action('template_redirect', 'redirect_to_login' );
  * @param  [type] $request     [description]
  * @param  [type] $user        [description]
  * @return [type]              [description]
- */
+
 function redirect_after_login($redirect_to, $request, $user) {
     global $user;
     if ( isset( $user->roles ) && is_array( $user->roles ) ) {
@@ -150,3 +150,5 @@ function redirect_after_login($redirect_to, $request, $user) {
 }
 
 add_filter( 'login_redirect', create_function( '$url, $query, $user', 'return_home_url();' ), 10, 3 );
+
+ */
