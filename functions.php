@@ -121,7 +121,7 @@ add_action( 'wp_enqueue_scripts', 'youlisten_add_acripts');
 function redirect_to_login() {
     // [String] wordpress global storing currently visited page
     global $pagenow;
-    if((!is_user_logged_in()) && ($pagenow != 'wp-login.php')) {
+    if( ! is_user_logged_in() && ! is_page( 'login' ) ){
         auth_redirect();
     }
 }
