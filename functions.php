@@ -137,14 +137,15 @@ add_action('template_redirect', 'redirect_to_login' );
  * @return [type]              [description]
  */
 function redirect_after_login($url, $request, $user) {
-    if ( $user && is_object($user) && is_a($user, 'wp_user') ) {
-        if ( in_array( 'student', $user->roles) ) {
+    if ( $user- && is_object($user) && is_a($user, 'wp_user') ) {
+        if ( $user->has_cap( 'student' ) ) {
             $url = home_url();
-        } else {
-            $url = admin_url();
         }
+    } else {
+        $url = admin_url();
     }
-    return $url;
+}
+return $url;
 }
 
 add_filter( 'login_redirect', 'redirect_after_login', 10, 3 );
