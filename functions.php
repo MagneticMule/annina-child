@@ -125,3 +125,28 @@ function redirect_to_login() {
         auth_redirect();
     }
 }
+
+add_action('template_redirect', 'redirect_to_login' );
+
+
+/**
+ * Redirect all users with the role of "student" to the home page after a successful login
+ * @param  [type] $redirect_to [description]
+ * @param  [type] $request     [description]
+ * @param  [type] $user        [description]
+ * @return [type]              [description]
+ */
+function redirect_after_login($redirect_to, $request, $user) {
+    global $user;
+    if ( isset( $user->roles ) && is_array( $user->roles ) ) {
+        if ( in_array( 'student', $user->roles) ) {
+            return home_url();
+        } else {
+            return $redirect_to;
+        }
+    } else {
+        return $redirect_to;
+    }
+}
+
+add_filter( 'login_redirect', create_function( '$url, $query, $user', 'return_home_url();' ), 10, 3 );
