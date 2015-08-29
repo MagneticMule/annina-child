@@ -144,6 +144,7 @@ function redirect_after_login($url, $request, $user) {
             $url = admin_url();
         }
     }
+    return $url;
 }
 
 add_filter( 'login_redirect', 'redirect_after_login', 10, 3 );
