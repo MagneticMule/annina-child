@@ -135,7 +135,7 @@ add_action('template_redirect', 'redirect_to_login' );
  * @param  [type] $request     [description]
  * @param  [type] $user        [description]
  * @return [type]              [description]
- */
+
 function redirect_after_login($url, $request, $user) {
     if ( $user- && is_object($user) && is_a($user, 'wp_user') ) {
         if ( $user->has_cap( 'student' ) ) {
@@ -150,3 +150,4 @@ return $url;
 
 add_filter( 'login_redirect', 'redirect_after_login', 10, 3 );
 
+ */
